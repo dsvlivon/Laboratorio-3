@@ -1,0 +1,4 @@
+ApiRest: es un intermediario entre front end y back end. es un programa o aplicacion que sabe como conectar una cosa con la otra
+no importa en q este programado el FE y el BE, la api sabra comunicar ambas
+En la actualidad las apiRest manejan Json xq es lo q mejor se entiende y funciona
+

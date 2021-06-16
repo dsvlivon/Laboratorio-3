@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/codigo"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercio 2_clase 2 - Calculadora</title>
+</head>
+<body>
+    <h3>Calculadora:</h3> 
+    <label for=""> VALOR 1: </label>
+    
+    <input type="text" name = "valor1" size="16" id="valor1"/>
+  
+    <label for="">   OPERACION: </label>
+    <select name="operador" id="operador">
+        <option value=" ">  </option>
+        <option value="-"> -</option>
+        <option value="+"> +</option>
+        <option value="*"> *</option>
+        <option value="/"> /</option>
+    </select>
+
+        <label for=""> VALOR 2: </label> 
+    <input type="text" name = "valor2" size="16" id="valor2"/><br/><br/>
+
+<br>
+<textarea name="" id="resultado" cols="30" rows="5">
+        
+    
+</textarea>
+
+<br>
+    <input type="button" value="Enviar" id= "btnEnviar" onclick = Calcular(this);>
+    <!-- aca lo importante es ver como se vincula el elemento (input type ="button")
+    co el evento onclick, este llmaa a una función-->
+    
+    <input type="button" value="Limpiar" id= "btnLimpiar" onclick= Limpiar()>
+    <!--lo q no se es si se pueden vincular varias funciones. En este ejercicio 
+    encadene una funcion a otra para lograr varias acciones-->
+   
+</body>
+</html>

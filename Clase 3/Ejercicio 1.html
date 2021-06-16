@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./estilo.css">
+
+    <script src="./codigo.js"></script>
+    <!--SE UTILIZA EL TAG <script> </scrip t> PARA INTRODUCIR CODIGO JS EN EL HEAD 
+    ACA SE PUEDEN CREAR Y LLAMAR FUNCIONES NORMALMENTE
+    COMO NO HAY TIPOS, LA FUNCION RECIBE UN "X" Q PUEDE SER UNA VARIABLE O UN OBJETO.
+    RECORDAR: Q son los objetos los q guardan info en su estado, por ejemplo el objeto 
+    document.getElementById("x").value basicamente retorna el estado value del campo "x"
+    atraves del metodo .getElemetById, del objeto document-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercio 1_clase 3 - Calculadora aplicando CSS</title>
+</head>
+<body>
+    <header> 
+        <h3>Calculadora aplicando CSS:</h3>        
+    </header>
+    
+    <nav> 
+        <a  href ="./clase3.html"> UTN</a>
+    </nav>
+    
+    <section class="esp1">
+        <label for=""> VALOR 1: </label>
+        <input type="text" name = "valor1" id="valor1"/>
+        
+        <label for=""> VALOR 2: </label> 
+        <input type="text" name = "valor2" id="valor2"/><br/><br/>
+        
+        <label for="">   OPERACION: </label>
+        <select name="operador" id="operador">
+            <option value=" ">  </option>
+            <option value="-"> -</option>
+            <option value="+"> +</option>
+            <option value="*"> *</option>
+            <option value="/"> /</option>
+        </select> <br><br>
+        
+        <textarea name="" id="resultado" cols="10" rows="2"></textarea><br/>
+
+    <article class="esp1">
+        
+        <input type="button" class="btnUno" value="CALCULAR" id= "btnEnviar" onclick = Calcular(this);>
+        <!-- aca lo importante es ver como se vincula el elemento (input type ="button")
+        co el evento onclick, este llmaa a una función-->
+        
+        <input type="button" class="btnUno" value="LIMPIAR" id= "btnLimpiar" onclick= Limpiar()>
+        <!--lo q no se es si se pueden vincular varias funciones. En este ejercicio 
+        encadene una funcion a otra para lograr varias acciones-->
+
+    </article>
+
+    <aside> 
+
+    </aside>
+
+    <footer class= "esp2"> 
+        <a  href ="https://github.com/"> GIT</a>
+        <a  href ="https://www.onlinegdb.com/"> GDB</a>
+        <a  href ="https://www.w3schools.com/"> W3S</a>
+    </footer>
+
+  
+
+
+   
+</body>
+</html>

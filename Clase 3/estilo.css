@@ -1,0 +1,57 @@
+p{
+    color:red;
+    font-size: 50pt;
+}
+h1,h2{
+    color: blue;
+}
+h3,h4
+{
+    color:teal;
+    background-color: lightskyblue;
+}
+.esp2{
+    color:sandybrown;
+    font-size: 14px;
+    background-color: lightgray;
+    font-weight: bold;
+    padding: 5px 5px;
+
+}
+.esp1{
+    padding: 5px 5px;
+    margin-top: 40px;
+}
+/*asi se comenta en css*/
+.boton{
+    background-color: purple;
+    color: white;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin: 4px 0px 4px 10px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    /*animaciones o eventos*/
+}
+.btnUno{
+    background-color:lightseagreen;
+    color: white;
+    padding: 5px 5px;
+    font-size: 16px;
+    margin: 4px 6px 4px 10px;
+    border: none;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnDos
+{
+    border-color: red;
+}
+.btnUno:hover{
+    background-color: mediumslateblue;
+}

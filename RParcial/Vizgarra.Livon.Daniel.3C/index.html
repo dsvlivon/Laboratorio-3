@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/spinner.css" type="text/css">
+  
+    <script src="./js/index.js"></script>
+    
+    <title>PP Daniel Vizgarra Livon</title>
+</head>
+<body id="body">
+    
+    
+    <div id="botonera">
+        <label for="btn Agregar"> Lista de Autos</label>
+        <input type="button" class="btnAgregar" value="AGREGAR" id="btnAgregar">
+    </div>
+
+    <div id="divTabla">
+        <!--nada-->
+    </div> 
+
+
+    <div id="form" class="contenedor" hidden>
+        </form>
+            <label for="btnCerrar"> Alta de un auto</label>
+            <input type="button" value="X" id="btnCerrar" onclick = Cerrar()><br><br>
+
+            <input type="text" name="" id="txtId" hidden>
+
+            <label for="txtMarca" id="lbl1">Marca:</label>
+            <input type="text" name="" id="txtMarca"><br><br>
+
+            <label for="txtModelo" id="lbl2">Modelo:</label>
+            <input type="text" name="" id="txtModelo"><br><br>
+
+            <label for="txtAño">Años:</label>
+            <select name="select" id="txtAño">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2011">2011</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select><br><br>
+
+            <input type="button" value="Guardar" id="btnOk">
+        </form>
+    </div>   
+
+    
+
+    <div id="spinner" class="contenedor" hidden>
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+
+</body>
+</html>

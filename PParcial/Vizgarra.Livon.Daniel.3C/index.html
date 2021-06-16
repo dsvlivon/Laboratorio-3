@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/spinner.css" type="text/css">
+  
+    <script src="./js/index.js"></script>
+    
+    <title>PP Daniel Vizgarra Livon</title>
+</head>
+<body id="body">
+    <h1>Lista de Materias</h1>
+    
+    <div id="divTabla">
+        <!--nada-->
+    </div>
+
+
+    <div id="botonera">
+        <input type="button" class="btnAgregar" value="AGREGAR" id="btnAgregar">
+    </div>
+
+
+    <div id="form" class="contenedor" hidden>
+        </form>
+            <input type="button" value="X" id="btnCerrar" onclick = Cerrar()>
+
+            <input type="text" name="" id="txtId" hidden>
+
+            <label for="txtNombre">Nombre:</label>
+            <input type="text" name="" id="txtNombre"><br><br>
+
+            <label for="txtCuatrimestre">Cuatrimestre:</label>
+            <select name="select" id="txtCuatrimestre">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select><br><br>
+
+            <label for="dteFecha">Fecha:</label>
+            <input type="date" name="" id="dteFecha"><br><br>
+
+            <label>Turno:</label>
+            <input type="radio" name="turno" id="tm"> Mañana 
+            <input type="radio" name="turno" id="tn"> Noche<br>
+            
+            <input type="button" value="Eliminar" id="btnBaja">
+            <input type="button" value="Modificar" id="btnModificar">
+            <input type="button" value="OK" id="btnOk">
+        </form>
+    </div>   
+
+
+    <div id="spinner" class="contenedor" hidden>
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+
+</body>
+</html>

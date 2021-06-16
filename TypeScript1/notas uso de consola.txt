@@ -1,0 +1,11 @@
+primero creo una carpeta
+abro un bash sobre esa y ejecto "tsc --init" para crear el archivo config
+tsc --v para ver la version d ts
+tsc -w para activar el modo watch (y va a quedar escuchando el contenido d la carpeta. Tambien va a crear los archivos js equivalentes)
+
+OPCIONES P ACTIVAR:
+-sourceRoot: puedo debuggear el ts d manera local
+-outDir: permite indicar el destino de los archivos js
+-rootDir: permite indicar el origen de los archivos ts ("./ts")
+
+git config --get remote.origin.url

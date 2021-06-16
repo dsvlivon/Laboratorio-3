@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemploAjax2021</title>
+    <script>
+        
+        // lert(obj.numero); // va a mostra el int 1 / el json no es tipado, puedo asignar cualquier cosa
+        
+        var peticionHttp = new XMLHttpRequest();
+    
+        peticionHttp.onreadystatechange = function(){
+            if(peticionHttp.readyState==4 & peticionHttp.status==200)
+            {
+                alert(peticionHttp.responseText);
+            }
+            
+        }
+        peticionHttp.open("POST","http://localhost:3000/nuevaPersona",true);//(http://www..../?id=1&nro=15151). para revolear params
+        
+        peticionHttp.setRequestHeader("Content-type","application/json");
+        var personaJson = {nombre:'daniel',apellido:'livon', telefono:'4244-5646',fecha:'1569970592'};//siempre antes del send
+        var stringP = JSON.stringify(personaJson);        
+        peticionHttp.send(stringP);//
+
+             
+        /*function ejecutarGET()
+        {
+            //var array = JSON.parse(letras);
+            peticionHttp.onreadystatechange = function(){
+                //console.log("Llego la respuesta",peticionHttp.status);
+                console.log("Llego la respuesta",peticionHttp.readyState);
+                if(peticionHttp.readyState==4 & peticionHttp.status==200)
+                {//teniendo esos 2 estados quiere decir q salio todo bien, osea q se puede consumir la info
+                    
+                    var listaPersonas = JSON.parse(peticionHttp.responseText);
+                    
+            
+                    console.log(listaPersonas);//Hasta aca, excelente!
+                }
+            }//lo infomra 4 veces. una p cada estado readyState, el estado de la info 
+            //adeventlistener se le pasa el evento y una funco p q cuando pasa, haga alog
+
+            peticionHttp.open("GET","http//localhost:3000/personas",true);
+            //peticionHttp.open("GET","https://607eee2c02a23c0017e8c685.mockapi.io/users",true);
+            // peticionHttp.setRequestHeader("key","value");
+            // peticionHttp.setRequestHeader("key","value");
+            // peticionHttp.setRequestHeader("key","value");//para pasar algo en la cabecera
+            peticionHttp.send();//aca dentro pondria algo si quisiera pedir algo del body
+    }*/
+        
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
