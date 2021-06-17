@@ -1,28 +1,40 @@
 class Main implements EventListenerObject{
 
     nombre:string;
+    mascota: Animal;
+    manenjoClick:ManejoClick = new ManejoClick();
 
     constructor(nombre:string)
     {
         this.nombre = nombre;
+        this.mascota = new Animal(0);
     }
      
     //para usar un evento en ts, conviene implementar la interfaz EventListenerObject
     public handleEvent(ev:Event):void
     {
-        let list:Array<Animal> = new Array;
-        let animal1: Animal = new Animal(4);
-        let animal2: Perro = new Perro(3);
-        let animal3: Gato = new Gato(4,9);
-
-        list.push(animal1);
-        list.push(animal2);
-        list.push(animal3);
-
-        for(let pet of list)
+        let event:HTMLElement = <HTMLElement>ev.target;//para q 2 o mas listener ejecuten dif cosas, puedo evaluar el ev q lo genero
+     
+        console.log(ev.type);//t devuelve un string del type del ev
+     
+        if(event.id=="btn")
         {
-            console.log(pet.queSoy(), pet.cantidadPatas);
+            //console.log(event.textContent);//no le funco...
+
+            let num = <HTMLInputElement>document.getElementById("inputNum"); // ojo q ahi se castea a "HTMLInputElement"... es un elemento mas especifico c otros atributos. simil polimorfismo
+            let numerica:number = Number(num.value);//los valores html devueltos siempre van a ser string xq provienen d texto plano
+            //apa! el casteo va a la clase Number y no al tipo d dato!!!
+            this.mascota.setCantidadPatas(numerica);
         }
+        else if(event.id == "btnAnimal")
+        {
+            this.Mostar();
+        }      
+        else
+        {
+            alert("explota!");
+        }
+
     }
 
     public saludar():void
@@ -31,9 +43,9 @@ class Main implements EventListenerObject{
         //console.log(this); ojo c usar this d js vs this d ts
     }
 
-    public contar()//al implementarla interfaz estos no los ve
+    public Mostar()//al implementarla interfaz estos no los ve
     {
-        console.log(1+2);
+       alert("la mascota tiene: " + this.mascota.getCantidadPatas());
     }
 
 }
@@ -42,12 +54,13 @@ class Main implements EventListenerObject{
 window.addEventListener("load",()=>{
     //let main: Main = new Main();//al aplicar la interfaz, manejo una instancia del main, entonces puedo por "polimorfismo" instanciarlo como Eventlistener
     let main: EventListenerObject = new Main("Daniel");
+
     let btn = <HTMLElement> document.getElementById("btn");
     btn.addEventListener("click", main);//si le pongo los parentesis estaria como ejecutando la func.
     //main.saludar();
     
-    let btnAnimal = <HTMLElement> document.getElementById("btnAnimal");
-    btnAnimal.addEventListener("click", main);
+    let btnMostrar = <HTMLElement> document.getElementById("btnAnimal");
+    btnMostrar.addEventListener("click", main);
     //esta ref del main q estoy pasando, como el tipo es EventListener
     //cuando la use, solamente va a ver el metodo handleEvent x la propia polimorfia
 
