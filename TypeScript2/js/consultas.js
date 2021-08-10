@@ -5,7 +5,7 @@ var Consultas = /** @class */ (function () {
     Consultas.prototype.ejecutarGet = function (url, listenerCallback) {
         var xml = new XMLHttpRequest();
         xml.onreadystatechange = function () {
-            if (xlm.readyState === 4) {
+            if (xml.readyState === 4) {
                 listenerCallback.response(xml.status, xml.responseText);
             }
         };

@@ -17,7 +17,7 @@ class Main implements ResponseGet{
     public handleEvent(ev:Event):void
     {
         //teniendo el "consultasAjax armado m permite lanzar una consulta"
-        this.consultasAjax.ejecutarGet("http://localhost...",this)//te va a pedir un response  
+        this.consultasAjax.ejecutarGet("http://localhost...",this);//te va a pedir un response  
         //es la misma logica c la q funca el handleEvent. genero mi propia interfaz "responseGet",q m da la estructua p generar la funcion
         //entonces cuando llamo al "ejecutarGet" m va a pedir un objeto q cumpla la condicion d q implemente la interfaz. entonces le paso ese "this"
         //q es 1 instancia d esta clase, tons cuando se ejecute el get, lo q vamos a obtener es q se ejecuta el metodo Response q tengo en mi clase

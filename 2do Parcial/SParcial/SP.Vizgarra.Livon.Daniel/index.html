@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="js/Vehiculo.js"></script>
+        <script type="text/javascript" src="js/Auto.js"></script>
+        <script type="text/javascript" src="js/Camioneta.js"></script>
+        <script type="text/javascript" src="js/Manejador.js"></script>
+        <title>Gestión de Vehiculos</title>
+    </head>
+
+    <body>
+        <!-- MAIN-->
+        <div class="main">
+            <h1>ABM VEHICULOS</h1><hr>
+            <div>
+                <input type="button" class="btnVerde" id="btnAlta" value="Alta">
+                <input type="button" class="btnRojo" id="btnLimpiar" value="Limpiar LocalStorage" style="float: right;">
+            </div>
+            <!-- FILTROS-->
+            <div>
+                <h2>FILTROS:</h2><hr>
+                <label for="filtro">Filtrar por: </label>
+                <select name="filtro" id="Filtrar">
+                    <option value="Todos">Todos</option>
+                    <option value="Auto">Auto</option>
+                    <option value="Camioneta">Camioneta</option>
+                </select>
+                <!-- PROMEDIO -->
+                <div class="promedios">
+                    <label for="promedio">Promedio de precio: </label>
+                    <input type="text" id="promedio" name="promedio" class="promedio">
+                    <input type="button" id="btnPromedio" class="btnAzul" value="Calcular Promedio">
+                </div>
+            </div>
+        </div>
+        <!-- FORM -->
+        <div class="container" id="container">
+            <div class="formContainer" id="formContainer" hidden>
+                <input class="btnCerrar" type="button" id="btnCerrar" value="X" style="float: right;">
+                <h1>Alta Vehiculo</h1><hr>
+                <label for="id">Id: </label>
+                <input type="text" id="inputId" name="id" placeholder="Id" disabled=true>
+                <label for="marca">Marca: </label>
+                <input type="text" id="inputMarca" name="marca" placeholder="Marca">
+                <label for="modelo">Modelo: </label>
+                <input type="text" id="inputModelo" name="modelo" placeholder="Modelo">
+                <label for="precio">Precio: </label>
+                <input type="number" id="inputPrecio" name="precio" placeholder="Precio">
+                <br>
+                <label for="tipo">Tipo: </label>
+                <select name="tipo" id="selectTipo">
+                    <option value="Auto">Auto</option>
+                    <option value="Camioneta">Camioneta</option>
+                </select>
+                <br><hr>
+                <input class="btnVerde" type="button" id="btnAgregar" value="Agregar" style="float: right;">
+            </div>
+        </div>
+        <!-- COMIENZO DE TABLA -->
+        <div class="table">
+            <!-- CHECKBOX -->
+            <div>
+                <h3>CAMPOS MOSTRADOS: <small><small> Tildar los campos a mostrar </small> </small></h3><hr>
+                <label for="chbId"> Id </label>
+                <input type="checkbox" name="checkbox" id="chbId" value="Id" checked>
+                <label for="chbMarca"> Marca </label>
+                <input type="checkbox" name="checkbox" id="chbMarca" value="Marca" checked>
+                <label for="chbModelo"> Modelo </label>
+                <input type="checkbox" name="checkbox" id="chbModelo" value="Modelo" checked>
+                <label for="chbPrecio"> Precio </label>
+                <input type="checkbox" name="checkbox" id="chbPrecio" value="Precio" checked>
+                <hr>
+            </div>
+            
+            <h1>LISTADO DE VEHICULOS</h1><hr><br>
+            <table id="table">
+                <thead>
+                    <tr id="trhead">
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+
+</html>
